@@ -4,7 +4,7 @@ import pandas as pd
 # Load the book database
 @st.cache_data
 def load_data():
-    return pd.read_csv("closed_door_romance_books_compiled.csv")
+    return pd.read_csv("Closed-Door_Romance_Tropes.csv")
 
 books = load_data()
 
