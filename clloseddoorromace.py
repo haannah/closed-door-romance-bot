@@ -9,7 +9,7 @@ def load_data():
 books = load_data()
 
 st.set_page_config(page_title="Closed-Door Romance Recommender", layout="centered")
-st.title("💖 Find Your Next Closed-Door Romance")
+st.title(" Find Your Next Closed-Door Romance")
 st.write("Type in your favorite tropes or themes (e.g. 'friends to lovers', 'second chance', 'grumpy sunshine'):")
 
 user_input = st.text_input("Enter tropes or keywords:")
