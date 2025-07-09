@@ -20,13 +20,14 @@ if user_input:
 
     if not matches.empty:
         st.subheader("📚 Recommendations")
-        for _, row in matches.head(3).iterrows():
-            st.markdown(f"### {row['Title']} by {row['Author']}")
-            if "Image" in df.columns and pd.notna(row["Image"]):
-                st.image(row["Image"], width=120)
-            st.markdown(f"_Tropes:_ {row['Tropes']}")
-            st.markdown(f"**{row['Description']}**")
-            st.markdown("---")
+        for _, row in matches.head(5).iterrows():
+    st.markdown(f"### {row['Title']} by {row['Author']}")
+    if "Image" in df.columns and pd.notna(row["Image"]):
+        st.image(row["Image"], width=120)
+    st.markdown(f"_Tropes:_ {row['Tropes']}")
+    st.markdown(f"**{row['Description'] or 'A sweet closed-door romance pick!'}**")
+    st.markdown("---")
+
     else:
         st.warning("No matches found. Try different or simpler tropes!")
 else:
