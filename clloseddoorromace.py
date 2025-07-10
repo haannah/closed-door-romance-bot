@@ -36,6 +36,21 @@ st.markdown(
     .css-18ni7ap.e8zbici2 {
         max-width: 100%;
     }
+    @font-face {
+        font-family: 'Muthiara';
+        src: url(data:font/otf;base64,AAEAAAAPAIAAAwBwRFNJRwAAAAEAANuIAAAACEdERUYB1gKdAADbkAAAACJHUE9TEpZFLgAA27QAACOwR1NVQt/r47EAAP9kAAAAsE9TLzJH4Vw3AAABeAAAAGBjbWFwwmF3uAAABWgAAAKGZ2FzcP//AAMAANuAAAAACGdseWbUj7PlAAAJvAAAzBxoZWFkG3JnFQAAAPwAAAA2aGhlYRVNBCoAAAE0AAAAJGhtdHgddi1mAAAB2AAAA5Bsb2N...
+    }
+
+    html, body, .stApp {
+        font-family: 'Muthiara', cursive;
+    }
+
+    .stApp h1 {
+        font-family: 'Muthiara', cursive;
+        font-size: 3em;
+        color: #fff;
+        text-align: center;
+    }
     </style>
     """,
     unsafe_allow_html=True
