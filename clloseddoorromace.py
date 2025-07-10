@@ -36,7 +36,7 @@ df = load_books()
 
 # App layout
 st.set_page_config(page_title="Find your next Closed-Door Romance Book", layout="centered")
-st.title("💖 Find your next Closed-Door Romance Book")
+st.title("Find your next Closed-Door Romance Book")
 
 # Toggle between search types
 search_type = st.radio("Search by:", ["Tropes", "Author"])
