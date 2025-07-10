@@ -20,6 +20,11 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+from PIL import Image
+import streamlit as st
+
+image = Image.open("ENEMIES TO LOVERS.jpg")
+st.image(image, caption="Popular Romance Tropes", use_column_width=True)
 
 
 df = load_books()
