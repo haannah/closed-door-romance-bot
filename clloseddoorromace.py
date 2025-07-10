@@ -7,9 +7,19 @@ def load_books():
     return pd.read_csv("Closed_Door_Romance_Tropes_With_Covers.csv")
 
 
-from PIL import Image
-img = Image.open("my_background.png")
-st.image(img, use_column_width=True)
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url("https://imgur.com/a/bUKTm6G");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 df = load_books()
 
