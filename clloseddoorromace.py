@@ -10,26 +10,39 @@ def load_books():
 st.markdown(
     """
     <style>
-    .stApp {
-        background-image: url("https://imgur.com/a/uILqApg");  /* Cozy books example */
+    html, body, .stApp {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url(https://imgur.com/a/uILqApg"); /* Replace with your image */
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
     }
 
     .block-container {
-        background-color: rgba(255, 255, 255, 0.0);  /* Makes background show through */
         padding-top: 3rem;
+        padding-bottom: 3rem;
+        background-color: rgba(255, 255, 255, 0.0); /* transparent background */
+    }
+
+    /* Remove padding around main container */
+    .main .block-container {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    /* Prevent layout constraints */
+    .css-18ni7ap.e8zbici2 {
+        max-width: 100%;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 from PIL import Image
 import streamlit as st
 
