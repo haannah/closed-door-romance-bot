@@ -6,7 +6,7 @@ import pandas as pd
 def load_books():
     return pd.read_csv("Closed_Door_Romance_Tropes_Updated.csv")
 
-
+# Background style
 st.markdown(
     """
     <style>
@@ -26,19 +26,25 @@ df = load_books()
 # App layout
 st.set_page_config(page_title="Find your next Closed-Door Romance Book", layout="centered")
 st.title("💖 Find your next Closed-Door Romance Book")
-st.write("Type in the tropes or vibes you're in the mood for! (e.g. `slowburn`, `enemies to more`, `second chance`)")
 
-# User input
-user_input = st.text_input("What are you looking for?")
+# Toggle between search types
+search_type = st.radio("Search by:", ["Tropes", "Author"])
+placeholder_text = "e.g. slowburn, enemies to more" if search_type == "Tropes" else "e.g. Jenny Proctor, Emma St. Clair"
+user_input = st.text_input(f"What {search_type.lower()} are you looking for?", placeholder=placeholder_text)
 
 # Recommendation logic
 if user_input:
-    keywords = [kw.strip().lower() for kw in user_input.split(",")]
-    matches = df[df["Tropes"].str.lower().apply(lambda x: any(k in x for k in keywords))]
+    user_input = user_input.strip().lower()
+
+    if search_type == "Tropes":
+        keywords = [kw.strip() for kw in user_input.split(",")]
+        matches = df[df["Tropes"].str.lower().apply(lambda x: any(k in x for k in keywords))]
+    else:
+        matches = df[df["Author"].str.lower().str.contains(user_input)]
 
     if not matches.empty:
         st.subheader("📚 Recommended for you:")
-        for _, row in matches.head(5).iterrows():
+        for _, row in matches.iterrows():
             st.markdown(f"### {row['Title']} by {row['Author']}")
             if "Image" in df.columns and pd.notna(row["Image"]):
                 st.image(row["Image"], width=150)
@@ -49,4 +55,4 @@ if user_input:
     else:
         st.warning("😔 No matches found. Try simpler or different keywords.")
 else:
-    st.info("💡 Start by typing a trope like 'friends to lovers' or 'grumpy sunshine'.")
+    st.info(f"💡 Start by typing a {search_type.lower()} to explore clean romance recs.")
