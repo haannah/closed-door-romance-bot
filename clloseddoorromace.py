@@ -4,7 +4,7 @@ import pandas as pd
 # Load book data
 @st.cache_data
 def load_books():
-    return pd.read_csv("romance_database - Sheet1.csv")
+    return pd.read_csv("Closed_Door_Romance_Tropes_With_Covers.csv")
 
 # Background style
 st.markdown(
