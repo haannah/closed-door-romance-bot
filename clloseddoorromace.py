@@ -7,7 +7,7 @@ def load_books():
     return pd.read_csv("Closed_Door_Romance_Tropes_Updated.csv")
 
 # Background style
-st.markdown(
+ st.markdown(
     """
     <style>
     html, body, .stApp {
@@ -15,7 +15,7 @@ st.markdown(
         width: 100%;
         margin: 0;
         padding: 0;
-        background-image: url"https://i.imgur.com/2jg9Htu.jpeg"); /* Replace with your image */
+        background-image: url("https://i.imgur.com/2jg9Htu.jpeg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -25,16 +25,14 @@ st.markdown(
     .block-container {
         padding-top: 3rem;
         padding-bottom: 3rem;
-        background-color: rgba(255, 255, 255, 0.0); /* transparent background */
+        background-color: rgba(255, 255, 255, 0.0);  /* transparent content cards */
     }
 
-    /* Remove padding around main container */
     .main .block-container {
         padding-left: 0rem;
         padding-right: 0rem;
     }
 
-    /* Prevent layout constraints */
     .css-18ni7ap.e8zbici2 {
         max-width: 100%;
     }
@@ -42,6 +40,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 from PIL import Image
 import streamlit as st
