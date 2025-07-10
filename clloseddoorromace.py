@@ -4,7 +4,7 @@ import pandas as pd
 # Load book data
 @st.cache_data
 def load_books():
-    return pd.read_csv("Closed_Door_Romance_Tropes_With_Covers.csv")
+    return pd.read_csv("Closed_Door_Romance_Tropes_Updated.csv")
 
 
 st.markdown(
@@ -24,8 +24,8 @@ st.markdown(
 df = load_books()
 
 # App layout
-st.set_page_config(page_title="Closed-Door Romance Recommender", layout="centered")
-st.title("💖 Closed-Door Romance Recommender")
+st.set_page_config(page_title="Find your next Closed-Door Romance Book", layout="centered")
+st.title("💖 Find your next Closed-Door Romance Book")
 st.write("Type in the tropes or vibes you're in the mood for! (e.g. `slowburn`, `enemies to more`, `second chance`)")
 
 # User input
