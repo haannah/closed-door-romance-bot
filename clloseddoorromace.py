@@ -18,6 +18,13 @@ st.markdown(
         background-attachment: fixed;
         height: 100vh;
         width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .block-container {
+        background-color: rgba(255, 255, 255, 0.0);  /* Makes background show through */
+        padding-top: 3rem;
     }
     </style>
     """,
