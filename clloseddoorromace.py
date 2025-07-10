@@ -20,23 +20,38 @@ st.markdown(
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
+        font-family: 'sans-serif';
     }
 
+    /* Make all content stand out with white background */
     .block-container {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        background-color: rgba(255, 255, 255, 0.0);  /* transparent content cards */
+        background-color: rgba(255, 255, 255, 0.92);
+        padding: 2rem 2rem;
+        border-radius: 1.25rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 2rem;
     }
 
     .main .block-container {
-        padding-left: 0rem;
-        padding-right: 0rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
+    /* Optional: Full-width layout override */
     .css-18ni7ap.e8zbici2 {
         max-width: 100%;
     }
-   
+
+    /* Optional: Style the page title text */
+    .stApp h1 {
+        font-size: 3em;
+        color: #222;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 1rem 1.5rem;
+        border-radius: 1rem;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
     </style>
     """,
     unsafe_allow_html=True
