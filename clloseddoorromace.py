@@ -16,8 +16,8 @@ st.markdown(
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
-        height: 100vh;
-        width: 100vw;
+        height: 500vh;
+        width: 500vw;
     }
     </style>
     """,
