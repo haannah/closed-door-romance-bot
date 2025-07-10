@@ -26,7 +26,7 @@ st.markdown(
 from PIL import Image
 import streamlit as st
 
-image = Image.open("ENEMIES TO LOVERS.jpg")
+image = Image.open("Add a heading.jpg")
 st.image(image, caption=" ", use_container_width=True)
 
 
