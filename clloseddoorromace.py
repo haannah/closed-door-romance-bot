@@ -7,7 +7,7 @@ def load_books():
     return pd.read_csv("Closed_Door_Romance_Tropes_Updated.csv")
 
 # Background style
- st.markdown(
+st.markdown(
     """
     <style>
     html, body, .stApp {
