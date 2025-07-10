@@ -15,7 +15,7 @@ st.markdown(
         width: 100%;
         margin: 0;
         padding: 0;
-        background-image: url(https://imgur.com/a/uILqApg"); /* Replace with your image */
+        background-image: url"https://i.imgur.com/2jg9Htu.jpeg"); /* Replace with your image */
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
