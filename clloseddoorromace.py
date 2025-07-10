@@ -11,13 +11,13 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://imgur.com/a/fppnOxb");  /* Cozy books example */
+        background-image: url("https://imgur.com/a/uILqApg");  /* Cozy books example */
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
-        height: 500vh;
-        width: 500vw;
+        height: 100vh;
+        width: 100vw;
     }
     </style>
     """,
