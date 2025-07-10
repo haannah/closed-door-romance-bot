@@ -7,16 +7,10 @@ def load_books():
     return pd.read_csv("Closed_Door_Romance_Tropes_With_Covers.csv")
 
 
-st.markdown(
-    """
-    <style>
-    .stApp {
-           background-color: #fff8f0;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+from PIL import Image
+img = Image.open("my_background.png")
+st.image(img, use_column_width=True)
+
 df = load_books()
 
 # App layout
