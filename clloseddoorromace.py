@@ -27,6 +27,8 @@ from PIL import Image
 import streamlit as st
 
 image = Image.open("ENEMIES TO LOVERS.jpg")
+st.image(image, caption=" ", use_column_width=True)
+
 
 
 
