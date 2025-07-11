@@ -82,7 +82,8 @@ if user_input:
         matches = df[df["Tropes"].apply(lambda x: isinstance(x, str) and any(k in x.lower() for k in keywords))]
 
     else:
-        matches = df[df["Author"].str.lower().str.contains(user_input)]
+        matches = df[df["Author"].apply(lambda x: isinstance(x, str) and user_input in x.lower())]
+
 
     if not matches.empty:
         st.subheader("📚 Recommended for you:")
