@@ -79,7 +79,8 @@ if user_input:
 
     if search_type == "Tropes":
         keywords = [kw.strip() for kw in user_input.split(",")]
-        matches = df[df["Tropes"].str.lower().apply(lambda x: any(k in x for k in keywords))]
+        matches = df[df["Tropes"].apply(lambda x: isinstance(x, str) and any(k in x.lower() for k in keywords))]
+
     else:
         matches = df[df["Author"].str.lower().str.contains(user_input)]
 
